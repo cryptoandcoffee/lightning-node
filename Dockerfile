@@ -23,8 +23,8 @@ RUN set -ex \
 ENV BITCOIN_DATA /data
 RUN mkdir "$BITCOIN_DATA" \
     && chown -R bitcoin:bitcoin "$BITCOIN_DATA" \
-    && ln -sfn "$BITCOIN_DATA" /home/bitcoin/.bitcoin \
-    && chown -h bitcoin:bitcoin /home/bitcoin/.bitcoin
+    && ln -sfn "$BITCOIN_DATA" /root/.bitcoin \
+    && chown -h bitcoin:bitcoin /root/.bitcoin
 
 VOLUME /data
 
